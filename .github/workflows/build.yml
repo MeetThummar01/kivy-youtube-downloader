@@ -29,13 +29,6 @@ jobs:
           zlib1g-dev \
           cmake
 
-    - name: Configure for Android Build
-      run: |
-        # Add a specific, stable build-tools version to the spec file
-        # This helps avoid license prompts and missing tool errors in CI environments
-        echo "" >> buildozer.spec
-        echo "android.build_tools = 30.0.3" >> buildozer.spec
-
     - name: Build with Buildozer
       run: |
         buildozer -v android debug
