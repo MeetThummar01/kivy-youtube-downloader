@@ -22,8 +22,6 @@ jobs:
         pip install buildozer cython==0.29.34 # Pin cython version for stability
         pip install git+https://github.com/kivy/pyjnius.git
         sudo apt-get update
-        # *** THIS IS THE CORRECTED LINE ***
-        # Added cmake and changed libncurses5-dev to libncurses-dev
         sudo apt-get install -y \
           libncurses-dev \
           libffi-dev \
