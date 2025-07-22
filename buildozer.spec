@@ -14,3 +14,5 @@ log_level = 2
 warn_on_root = 1
 android.ndk = 25b
 android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
+# This is the crucial line that fixes the build tool error
+android.build_tools = 30.0.3
