@@ -5,7 +5,7 @@ package.domain = org.example
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
-requirements = python3==3.9.18,kivy,yt-dlp,requests,pillow,pyjnius,setuptools,cython,docutils
+requirements = python3,kivy,yt-dlp,requests,pillow,pyjnius,setuptools,cython
 orientation = portrait
 fullscreen = 0
 
@@ -14,5 +14,3 @@ log_level = 2
 warn_on_root = 1
 android.ndk = 25b
 android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
-# This is the crucial line that fixes the build tool error
-android.build_tools = 30.0.3
