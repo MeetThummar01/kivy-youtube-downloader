@@ -22,18 +22,20 @@ jobs:
         pip install buildozer cython==0.29.34 # Pin cython version for stability
         pip install git+https://github.com/kivy/pyjnius.git
         sudo apt-get update
+        # *** THIS IS THE CORRECTED LINE ***
+        # Added cmake and changed libncurses5-dev to libncurses-dev
         sudo apt-get install -y \
-          libncurses5-dev \
+          libncurses-dev \
           libffi-dev \
           libssl-dev \
-          zlib1g-dev
+          zlib1g-dev \
+          cmake
 
     - name: Build with Buildozer
       run: |
         buildozer -v android debug
 
     - name: Upload APK
-      # *** THIS IS THE CORRECTED LINE ***
       uses: actions/upload-artifact@v4
       with:
         name: yt-downloader-apk
